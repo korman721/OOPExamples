@@ -99,7 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleSystemPrefab: {fileID: 5553503921146364926, guid: 6a70e294b8b4a294597b4906c94e78ed,
     type: 3}
-  _accelerationValue: 10
+  _accelerationSpeedValue: 20
+  _accelerationSpeedRotationValue: 40
 --- !u!135 &76972210638501894
 SphereCollider:
   m_ObjectHideFlags: 0
