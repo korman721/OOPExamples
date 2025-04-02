@@ -3,13 +3,14 @@ using UnityEngine;
 [RequireComponent(typeof(ArtifactCollector))]
 public class Hero : MonoBehaviour
 {
+    private const KeyCode ArtifactUseKeyCode = KeyCode.F;
+
     private const string HorizontalAxis = "Horizontal";
     private const string VerticalAxis = "Vertical";
 
     [field: SerializeField] public float RotationSpeed { get; set; }
     [field: SerializeField] public float MovementSpeed { get; set; }
     [field: SerializeField] public float Health { get; set; }
-
 
     private ArtifactCollector _artifactCollector;
     private Mover _mover;
@@ -35,7 +36,7 @@ public class Hero : MonoBehaviour
         _xInput = Input.GetAxisRaw(HorizontalAxis);
         _zInput = Input.GetAxisRaw(VerticalAxis);
 
-        if (Input.GetKeyDown(KeyCode.F) && _artifactCollector.IsPicked)
+        if (Input.GetKeyDown(ArtifactUseKeyCode) && _artifactCollector.IsPicked)
         {
             _artifactCollector.Artifact.Use(this);
 
