@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class AcceleratorArtifact : Artifact
 {
-    [SerializeField] private int _accelerationSpeedValue;
-    [SerializeField] private int _accelerationSpeedRotationValue;
+    [SerializeField, Range(0, 1000)] private int _accelerationSpeedValue;
+    [SerializeField, Range(0, 1000)] private int _accelerationSpeedRotationValue;
 
     public override void Use(Hero hero)
     {
-        if (_accelerationSpeedValue < 0)
-            return;
-
         hero.MovementSpeed += _accelerationSpeedValue;
         hero.RotationSpeed += _accelerationSpeedRotationValue;
 

@@ -100,7 +100,7 @@ MonoBehaviour:
   _particleSystemPrefab: {fileID: 5553503921146364926, guid: 6a70e294b8b4a294597b4906c94e78ed,
     type: 3}
   _force: 20
-  _bullet: {fileID: 4072823527883387308, guid: e19b718fbe600fd4d8b4f346d18c739a, type: 3}
+  _bullet: {fileID: 470096810295455851, guid: e19b718fbe600fd4d8b4f346d18c739a, type: 3}
 --- !u!135 &172679222321982863
 SphereCollider:
   m_ObjectHideFlags: 0

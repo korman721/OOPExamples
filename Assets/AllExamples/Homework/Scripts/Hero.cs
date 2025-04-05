@@ -8,9 +8,43 @@ public class Hero : MonoBehaviour
     private const string HorizontalAxis = "Horizontal";
     private const string VerticalAxis = "Vertical";
 
-    [field: SerializeField] public float RotationSpeed { get; set; }
-    [field: SerializeField] public float MovementSpeed { get; set; }
-    [field: SerializeField] public float Health { get; set; }
+    [SerializeField, Range(1, 1000)] private float _rotationSpeed;
+    [SerializeField, Range(1, 1000)] private float _movementSpeed;
+    [SerializeField, Range(1, 1000)] private float _health;
+
+    public float RotationSpeed
+    {
+        get => _rotationSpeed;
+        set
+        {
+            if (value >= 0)
+            {
+                _rotationSpeed = value;
+            }
+        }
+    }
+    public float MovementSpeed
+    {
+        get => _movementSpeed;
+        set
+        {
+            if (value >= 0)
+            {
+                _movementSpeed = value;
+            }
+        }
+    }
+    public float Health
+    {
+        get => _health;
+        set
+        {
+            if (value >= 0)
+            {
+                _health = value;
+            }
+        }
+    }
 
     private ArtifactCollector _artifactCollector;
     private Mover _mover;
@@ -38,9 +72,9 @@ public class Hero : MonoBehaviour
 
         if (Input.GetKeyDown(ArtifactUseKeyCode) && _artifactCollector.IsPicked)
         {
-            _artifactCollector.Artifact.Use(this);
+            Artifact artifact = _artifactCollector.GetArtifact();
 
-            _artifactCollector.IsPicked = false;
+            artifact.Use(this);
         }
     }
 

@@ -1035,9 +1035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d967a8dc0853609449e7d79db60d6823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RotationSpeed>k__BackingField: 200
-  <MovementSpeed>k__BackingField: 10
-  <Health>k__BackingField: 50
+  _rotationSpeed: 200
+  _movementSpeed: 20
+  _health: 50
 --- !u!136 &1664192797
 CapsuleCollider:
   m_ObjectHideFlags: 0
