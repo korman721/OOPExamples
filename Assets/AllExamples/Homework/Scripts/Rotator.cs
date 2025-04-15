@@ -10,3 +10,4 @@ public class Rotator
         transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, step);
     }
 }
+    
